@@ -1,0 +1,63 @@
+body{
+	background: url('../images/bg.jpg');
+}
+.container{
+	width: 80%;
+}
+
+table{
+	margin: 20px auto;
+	border: 1px solid black;
+}
+td{
+	width: 250px;
+	font-weight: bold;
+	padding: 5px 10px;
+}
+td:last-of-type{
+	width: 70px;
+}
+
+
+#home,#add,#list{
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	padding: 20px 0;
+	width: 49%;
+	background: url('../images/buttons.jpg');
+}
+
+#myinput{
+	width: 250px;
+	padding: 15px;
+}
+
+#addtask{
+	width: 200px;
+	padding: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#list{
+	padding: 20px 0;
+	width: 99%;
+}
+
+#addcontainer, #listcontainer,#addsuccess,#deletesuccess,#empty-message{
+	display: none;
+}
+
+
+#addsuccess,#deletesuccess,#empty-message{
+	padding: 10px;
+	color: #fff;
+}
+#addsuccess{
+	background: green;
+}
+
+#deletesuccess,#empty-message{
+	background: red;
+}
