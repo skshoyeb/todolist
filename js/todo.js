@@ -53,9 +53,11 @@ $(document).ready(function(){
 		  
 			$('#listcontainer').html('<table></table>');
 			
-			for(var i=1; i< localStorage.length; i++){
-				var item = localStorage.getItem(localStorage.key(i));
-				$('#listcontainer table').append('<tr><td>'+ item +'</td><td><a href="#" id='+ localStorage.key(i) +' class="delete">delete</a></td></tr>');
+			for(var i=0; i< localStorage.length; i++){
+				if( localStorage.key(i) != 'index'){
+					var item = localStorage.getItem(localStorage.key(i));
+					$('#listcontainer table').append('<tr><td>'+ item +'</td><td><a href="#" id='+ localStorage.key(i) +' class="delete">delete</a></td></tr>');
+				}	
 			}
 			$('#listcontainer').show();
 		  
