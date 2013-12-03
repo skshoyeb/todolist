@@ -43,6 +43,14 @@ $(document).ready(function(){
 				$('#deleted-message').slideDown();
 				$('#deleted-message').delay(500).slideUp(3000);
 				$('#listcontainer').hide();
+				
+				if(k==1 || localStorage.length<=1){
+					$('#empty-message').slideDown();
+					$('#empty-message').delay(1000).slideUp(3000);
+				}
+				else
+					loadList();
+				
 			//	k--;
 			//	localStorage.index00 = k;
 		  });	
