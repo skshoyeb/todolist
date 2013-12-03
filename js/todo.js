@@ -82,7 +82,6 @@ $(document).ready(function(){
 		  }
 		  
 		  function clearall(){
-				alert('clearingall');
 				localStorage.clear();
 		  }
 		  
