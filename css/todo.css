@@ -1,9 +1,15 @@
+
+
 body{
 	background: url('../images/bg.jpg');
 }
 .container{
 	width: 90%;
 	margin:0 auto;
+}
+
+nav{
+	width: 100%;
 }
 
 table{
@@ -26,7 +32,8 @@ td:last-of-type{
 	text-transform: uppercase;
 	color: #fff;
 	padding: 20px 0;
-	width: 49%;
+	float:left;
+	width: 50%;
 	background: url('../images/buttons.jpg');
 }
 
@@ -44,7 +51,7 @@ td:last-of-type{
 
 #list-button{
 	padding: 20px 0;
-	width: 99%;
+	width: 100%;
 }
 
 #addcontainer, #listcontainer,#addsuccess,#deletesuccess,#empty-message{
