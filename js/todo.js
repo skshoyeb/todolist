@@ -29,8 +29,8 @@ $(document).ready(function(){
 		  $('#addtask').on('click',function(){
 			if( $('#myinput').val() ){	
 				localStorage.setItem('key'+k, $('#myinput').val() );
-				$('#addsuccess').slideDown();
-				$('#addsuccess').delay(500).slideUp(3000);
+				$('#added-message').slideDown();
+				$('#added-message').delay(500).slideUp(3000);
 				k++;
 				localStorage.index00 = k;
 				$('#myinput').val('');
@@ -40,8 +40,8 @@ $(document).ready(function(){
 		  
 		  $('#listcontainer').on('click','.delete',function(){
 				localStorage.removeItem($(this).attr('id'));
-				$('#deletesuccess').slideDown();
-				$('#deletesuccess').delay(500).slideUp(3000);
+				$('#deleted-message').slideDown();
+				$('#deleted-message').delay(500).slideUp(3000);
 				$('#listcontainer').hide();
 			//	k--;
 			//	localStorage.index00 = k;

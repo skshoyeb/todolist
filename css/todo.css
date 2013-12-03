@@ -54,20 +54,20 @@ td:last-of-type{
 	width: 100%;
 }
 
-#addcontainer, #listcontainer,#addsuccess,#deletesuccess,#empty-message{
+#addcontainer, #listcontainer,#added-message,#deleted-message,#empty-message{
 	display: none;
 }
 
 
-#addsuccess,#deletesuccess,#empty-message{
+#added-message,#deleted-message,#empty-message{
 	padding: 10px;
 	color: #fff;
 }
-#addsuccess{
+#added-message{
 	background: green;
 }
 
-#deletesuccess,#empty-message{
+#deleted-message,#empty-message{
 	background: red;
 }
 
