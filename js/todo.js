@@ -1,9 +1,16 @@
 $(document).ready(function(){	
 		
 	if(typeof localStorage !=="undefined"){	
+		
+			if(!localStorage.index00)
+				clearall();
+			
 			if(localStorage.length <= 1)
-					localStorage.index = 1;
-				k = localStorage.index;	
+					localStorage.index00 = 1;
+					
+			k = localStorage.index00;	
+			
+				
 	}
 		
 	else{
@@ -25,7 +32,7 @@ $(document).ready(function(){
 				$('#addsuccess').slideDown();
 				$('#addsuccess').delay(500).slideUp(3000);
 				k++;
-				localStorage.index = k;
+				localStorage.index00 = k;
 				$('#myinput').val() ='';
 			}
 				
@@ -37,16 +44,22 @@ $(document).ready(function(){
 				$('#deletesuccess').delay(500).slideUp(3000);
 				$('#listcontainer').hide();
 			//	k--;
-			//	localStorage.index = k;
+			//	localStorage.index00 = k;
 		  });	
 		  
 		  $('#list').on('click',function(){
 				$('#addcontainer').hide();
-				if(k==1){
+				if(k==1 || localStorage.length<=1){
 					$('#empty-message').slideDown();
 					$('#empty-message').delay(500).slideUp(3000);
 				}
-				loadList();
+				else
+					loadList();
+		  });
+		  
+		  
+		  $('#listcontainer').on('click','#deleteall',function(){
+					clearall();
 		  });
 		  
 		  function loadList(){
@@ -54,11 +67,12 @@ $(document).ready(function(){
 			$('#listcontainer').html('<table></table>');
 			
 			for(var i=0; i< localStorage.length; i++){
-				if( localStorage.key(i) != 'index'){
+				if( localStorage.key(i) != 'index00'){
 					var item = localStorage.getItem(localStorage.key(i));
 					$('#listcontainer table').append('<tr><td>'+ item +'</td><td><a href="#" id='+ localStorage.key(i) +' class="delete">delete</a></td></tr>');
 				}	
 			}
+			$('#listcontainer table').append('<tr><td><a href="#" id="deleteall" class="delete">DeleteAll</a></td></tr>');
 			$('#listcontainer').show();
 		  
 		  }
@@ -67,6 +81,9 @@ $(document).ready(function(){
 				location.reload();
 		  }
 		  
-		  
+		  function clearall(){
+				alert('clearingall');
+				localStorage.clear();
+		  }
 		  
 	});	  
