@@ -61,11 +61,13 @@ td:last-of-type{
 }
 
 #addcontainer, #listcontainer,#added-message,#deleted-message,#empty-message{
+	clear:both;
 	display: none;
 }
 
 
 #added-message,#deleted-message,#empty-message{
+	
 	padding: 10px;
 	color: #fff;
 }
