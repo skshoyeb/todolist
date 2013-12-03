@@ -17,11 +17,11 @@ $(document).ready(function(){
 		  alert("Sorry, your browser does not support web storage...");
 	}
 		  
-		  $('#home').on('click',function(){
+		  $('#home-button').on('click',function(){
 				resetall();
 		  });
 		  
-		  $('#add').on('click',function(){
+		  $('#add-button').on('click',function(){
 				$('#addcontainer').show();
 				$('#listcontainer').hide();
 			});
@@ -47,7 +47,7 @@ $(document).ready(function(){
 			//	localStorage.index00 = k;
 		  });	
 		  
-		  $('#list').on('click',function(){
+		  $('#list-button').on('click',function(){
 				$('#addcontainer').hide();
 				if(k==1 || localStorage.length<=1){
 					$('#empty-message').slideDown();

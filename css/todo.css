@@ -2,7 +2,8 @@ body{
 	background: url('../images/bg.jpg');
 }
 .container{
-	width: 80%;
+	width: 90%;
+	margin:0 auto;
 }
 
 table{
@@ -11,7 +12,7 @@ table{
 	background: url('../images/bg01.jpg');
 }
 td{
-	width: 250px;
+	width: 80%;
 	font-weight: bold;
 	padding: 5px 10px;
 }
@@ -20,7 +21,7 @@ td:last-of-type{
 }
 
 
-#home,#add,#list{
+#home-button,#add-button,#list-button{
 	font-weight: bold;
 	text-transform: uppercase;
 	color: #fff;
@@ -30,18 +31,18 @@ td:last-of-type{
 }
 
 #myinput{
-	width: 250px;
+	width: 25%;
 	padding: 15px;
 }
 
 #addtask{
-	width: 200px;
+	width: 22%;
 	padding: 15px;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-#list{
+#list-button{
 	padding: 20px 0;
 	width: 99%;
 }
@@ -61,4 +62,18 @@ td:last-of-type{
 
 #deletesuccess,#empty-message{
 	background: red;
+}
+
+@media screen and (max-width: 420px){
+	
+	#addtask{
+		font-size: 10px;
+		padding: 5px;
+	}
+	
+	#myinput{
+		font-size: 10px;
+		padding: 5px;
+	}
+}
 }
