@@ -71,6 +71,12 @@ $(document).ready(function(){
 				  
 				  $('#listcontainer').on('click','#deleteall',function(){
 							clearall();
+							if(k==1 || localStorage.length<=1){
+							$('#empty-message').slideDown();
+							$('#empty-message').delay(1000).slideUp(3000);
+						}
+						else
+							loadList();
 				  });
 				 
 
