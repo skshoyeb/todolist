@@ -33,7 +33,7 @@ $(document).ready(function(){
 				$('#addsuccess').delay(500).slideUp(3000);
 				k++;
 				localStorage.index00 = k;
-				$('#myinput').val() ='';
+				$('#myinput').val('');
 			}
 				
 		  });
