@@ -4,6 +4,7 @@ $(document).ready(function(){
 		var storageTest = function(){
 			if(typeof localStorage =="undefined")
 				alert("Sorry, your browser does not support web storage...");
+			
 		}
 		
 		var init = function(){
@@ -22,7 +23,7 @@ $(document).ready(function(){
 		  
 				$('#home-button').on('click',function(){
 						resetall();
-				});
+				  });
 				  
 				  $('#add-button').on('click',function(){
 						$('#addcontainer').show();
@@ -71,16 +72,8 @@ $(document).ready(function(){
 				  
 				  $('#listcontainer').on('click','#deleteall',function(){
 							clearall();
-							if(k==1 || localStorage.length<=1){
-							$('#empty-message').slideDown();
-							$('#empty-message').delay(1000).slideUp(3000);
-						}
-						else
-							loadList();
 				  });
-				 
-
-				 
+				  
 				  function loadList(){
 				  
 					$('#listcontainer').html('<table></table>');
@@ -103,8 +96,7 @@ $(document).ready(function(){
 				  function clearall(){
 						localStorage.clear();
 				  }
-		}
-		
+		}		  
 		  storageTest();
 		  init();
 		  bindEvents();
