@@ -33,8 +33,8 @@ $(document).ready(function(){
 				  $('#add-task').on('click',function(){
 					if( $('#myinput').val() ){	
 						localStorage.setItem('key'+k, $('#myinput').val() );
-						$('#added-message').slideDown();
-						$('#added-message').delay(500).slideUp(3000);
+						$('#message .added-message').slideDown();
+						$('#message .added-message').delay(100).slideUp(3000);
 						k++;
 						localStorage.index00 = k;
 						$('#myinput').val('');
@@ -44,13 +44,12 @@ $(document).ready(function(){
 				  
 				  $('#list-container').on('click','.delete',function(){
 						localStorage.removeItem($(this).attr('id'));
-						$('#deleted-message').slideDown();
-						$('#deleted-message').delay(500).slideUp(3000);
+						$('#message .deleted-message').slideDown();
+						$('#message .deleted-message').delay(500).slideUp(3000);
 						$('#list-container').hide();
 						
 						if(k==1 || localStorage.length<=1){
-							$('#empty-message').slideDown();
-							$('#empty-message').delay(1000).slideUp(3000);
+							$('#message .empty-message').slideDown();
 						}
 						else
 							loadList();
@@ -62,8 +61,8 @@ $(document).ready(function(){
 				  $('#list-button').on('click',function(){
 						$('#add-container').hide();
 						if(k==1 || localStorage.length<=1){
-							$('#empty-message').slideDown();
-							$('#empty-message').delay(500).slideUp(3000);
+							$('#message .empty-message').slideDown();
+							
 						}
 						else
 							loadList();
@@ -74,8 +73,8 @@ $(document).ready(function(){
 							clearall();
 							$('#add-container').hide();
 							$('#list-container').hide();
-							$('#empty-message').slideDown();
-							$('#empty-message').delay(500).slideUp(3000);
+							$('#message .empty-message').slideDown();
+							$('#message .empty-message').delay(100).slideUp(3000);
 							
 				  });
 				  

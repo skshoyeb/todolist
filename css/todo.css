@@ -60,21 +60,21 @@ td:last-of-type{
 	width: 100%;
 }
 
-#add-container,#list-container,#added-message,#deleted-message,#empty-message{
+#add-container,#list-container,.added-message,.deleted-message,.empty-message{
 	clear:both;
 	display: none;
 }
 
 
-#added-message,#deleted-message,#empty-message{
+.added-message,.deleted-message,.empty-message{
 	padding: 10px;
 	color: #fff;
 }
-#added-message,#deleted-message{
+.added-message,.deleted-message{
 	background: green;
 }
 
-#empty-message{
+.empty-message{
 	background: red;
 }
 
