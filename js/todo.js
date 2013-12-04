@@ -28,6 +28,7 @@ $(document).ready(function(){
 				  $('#add-button').on('click',function(){
 						$('#add-container').show();
 						$('#list-container').hide();
+						$('#message .empty-message').slideUp();
 					});
 					
 				  $('#add-task').on('click',function(){
@@ -47,6 +48,7 @@ $(document).ready(function(){
 						$('#message .deleted-message').slideDown();
 						$('#message .deleted-message').delay(500).slideUp(3000);
 						$('#list-container').hide();
+						$('#message .empty-message').slideUp();
 						
 						if(k==1 || localStorage.length<=1){
 							$('#message .empty-message').slideDown();
@@ -60,6 +62,7 @@ $(document).ready(function(){
 				  
 				  $('#list-button').on('click',function(){
 						$('#add-container').hide();
+						$('#message .empty-message').slideUp();
 						if(k==1 || localStorage.length<=1){
 							$('#message .empty-message').slideDown();
 							
