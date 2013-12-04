@@ -10,7 +10,7 @@ $(document).ready(function(){
 		var init = function(){
 			
 			if(!localStorage.index00)
-				clearall();
+				localStorage.clear();
 			
 			if(localStorage.length <= 1)
 					localStorage.index00 = 1;
@@ -26,11 +26,11 @@ $(document).ready(function(){
 				  });
 				  
 				  $('#add-button').on('click',function(){
-						$('#addcontainer').show();
-						$('#listcontainer').hide();
+						$('#add-container').show();
+						$('#list-container').hide();
 					});
 					
-				  $('#addtask').on('click',function(){
+				  $('#add-task').on('click',function(){
 					if( $('#myinput').val() ){	
 						localStorage.setItem('key'+k, $('#myinput').val() );
 						$('#added-message').slideDown();
@@ -42,11 +42,11 @@ $(document).ready(function(){
 						
 				  });
 				  
-				  $('#listcontainer').on('click','.delete',function(){
+				  $('#list-container').on('click','.delete',function(){
 						localStorage.removeItem($(this).attr('id'));
 						$('#deleted-message').slideDown();
 						$('#deleted-message').delay(500).slideUp(3000);
-						$('#listcontainer').hide();
+						$('#list-container').hide();
 						
 						if(k==1 || localStorage.length<=1){
 							$('#empty-message').slideDown();
@@ -60,7 +60,7 @@ $(document).ready(function(){
 				  });	
 				  
 				  $('#list-button').on('click',function(){
-						$('#addcontainer').hide();
+						$('#add-container').hide();
 						if(k==1 || localStorage.length<=1){
 							$('#empty-message').slideDown();
 							$('#empty-message').delay(500).slideUp(3000);
@@ -70,22 +70,27 @@ $(document).ready(function(){
 				  });
 				  
 				  
-				  $('#listcontainer').on('click','#deleteall',function(){
+				  $('#list-container').on('click','#deleteall',function(){
 							clearall();
+							$('#add-container').hide();
+							$('#list-container').hide();
+							$('#empty-message').slideDown();
+							$('#empty-message').delay(500).slideUp(3000);
+							
 				  });
 				  
 				  function loadList(){
 				  
-					$('#listcontainer').html('<table></table>');
+					$('#list-container').html('<table></table>');
 					
 					for(var i=0; i< localStorage.length; i++){
 						if( localStorage.key(i) != 'index00'){
 							var item = localStorage.getItem(localStorage.key(i));
-							$('#listcontainer table').append('<tr><td>'+ item +'</td><td><a href="#" id='+ localStorage.key(i) +' class="delete">delete</a></td></tr>');
+							$('#list-container table').append('<tr><td>'+ item +'</td><td><a href="#" id='+ localStorage.key(i) +' class="delete">delete</a></td></tr>');
 						}	
 					}
-					$('#listcontainer table').append('<tr><td><a href="#" id="deleteall" class="delete">DeleteAll</a></td></tr>');
-					$('#listcontainer').show();
+					$('#list-container table').append('<tr><td><a href="#" id="deleteall" class="delete">DeleteAll</a></td></tr>');
+					$('#list-container').show();
 				  
 				  }
 				  

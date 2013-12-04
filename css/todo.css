@@ -48,7 +48,7 @@ td:last-of-type{
 	padding: 15px;
 }
 
-#addtask{
+#add-task{
 	width: 22%;
 	padding: 15px;
 	font-weight: bold;
@@ -60,7 +60,7 @@ td:last-of-type{
 	width: 100%;
 }
 
-#addcontainer, #listcontainer,#added-message,#deleted-message,#empty-message{
+#add-container,#list-container,#added-message,#deleted-message,#empty-message{
 	clear:both;
 	display: none;
 }
@@ -70,17 +70,17 @@ td:last-of-type{
 	padding: 10px;
 	color: #fff;
 }
-#added-message{
+#added-message,#deleted-message{
 	background: green;
 }
 
-#deleted-message,#empty-message{
+#empty-message{
 	background: red;
 }
 
 @media screen and (max-width: 530px){
 	
-	#addtask{
+	#add-task{
 		font-size: 10px;
 		padding: 5px;
 	}
@@ -89,5 +89,4 @@ td:last-of-type{
 		font-size: 10px;
 		padding: 5px;
 	}
-}
 }
